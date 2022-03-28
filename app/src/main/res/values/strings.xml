@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Vehicle Rental</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="inspect">Car Image</string>
+    <string name="mainA_text">Welcome to you</string>
+    <string name="mainA_text2">Vehicle Rental,</string>
+    <string name="Login">Login</string>
+    <string name="Register">Create An Account</string>
+    <string name="have_account">Have an Account? Register Here</string>
+    <string name="sign">Sign in to continue</string>
+    <string name="log">Already Registered? Login</string>
+    <string name="post">Submit</string>
+    <string name="car">Car detail</string>
+
+    <!--    registration-->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="vehicleName">Vehicle Name</string>
+
+</resources>
