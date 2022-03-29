@@ -35,6 +35,7 @@ public class UserPage extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.vehicleList);
         vehicles = new ArrayList<>();
+        // yaha setAdapter gara with empty data, yaha nabhayera error aako
         extractData();
     }
 
@@ -61,7 +62,7 @@ public class UserPage extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
+                // yaha chai adapter lai data change bhayo bhanera notify matra gare pugxa
                 LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
                 llm.setOrientation(LinearLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(llm);
