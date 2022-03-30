@@ -24,11 +24,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserPage extends AppCompatActivity {
-//    http://image.tmdb.org/t/p/w185
+
     RecyclerView recyclerView;
     List<Vehicle> vehicles;
     private String JSON_URL = "http://192.168.1.70/api/get.php";
-//    private String JSON_URL = "https://api.themoviedb.org/3/movie/popular?api_key=caa4226c251747a5c3bf3d6bc23b2d18";
 
     Adapter adapter;
     LinearLayoutManager llm ;
@@ -56,7 +55,7 @@ public class UserPage extends AppCompatActivity {
             public void onResponse(String response) {
                 Log.d("Success",response.toString());
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
+                    JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
                     Log.d("Success object",jsonObject.toString());
                     JSONArray jsonArray = jsonObject.getJSONArray("results");
                     if(jsonArray.length()>0){
@@ -71,6 +70,7 @@ public class UserPage extends AppCompatActivity {
                         adapter.notifyDataSetChanged();
                     }
                 } catch (JSONException e) {
+                    Log.e("erroris", "myjson" + e );
                     e.printStackTrace();
                 }
 
