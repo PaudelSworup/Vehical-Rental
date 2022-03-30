@@ -186,6 +186,7 @@ public class Index extends AppCompatActivity {
                 Map<String ,String> params = new HashMap<>();
                 params.put("name", vehicle_name );
                 params.put("pic" , imageEncode);
+                params.put("detail",vehicle_detail);
                 return params;
             }
         };

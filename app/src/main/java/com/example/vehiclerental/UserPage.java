@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -12,6 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -22,60 +24,64 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserPage extends AppCompatActivity {
-
+//    http://image.tmdb.org/t/p/w185
     RecyclerView recyclerView;
     List<Vehicle> vehicles;
     private String JSON_URL = "http://192.168.1.70/api/get.php";
+//    private String JSON_URL = "https://api.themoviedb.org/3/movie/popular?api_key=caa4226c251747a5c3bf3d6bc23b2d18";
+
     Adapter adapter;
+    LinearLayoutManager llm ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
-
         recyclerView = findViewById(R.id.vehicleList);
         vehicles = new ArrayList<>();
+        adapter = new Adapter(getApplicationContext(),vehicles);
+        llm = new LinearLayoutManager(getApplicationContext());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(llm);
+        recyclerView.setAdapter(adapter);
         extractData();
     }
 
-    public  void extractData(){
+    public void extractData() {
         RequestQueue queue = Volley.newRequestQueue(this);
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, JSON_URL, null, new Response.Listener<JSONObject>() {
+        StringRequest request = new StringRequest(Request.Method.GET, JSON_URL, new Response.Listener<String>() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
-            public void onResponse(JSONObject response) {
-                Log.d("TAG", "onSuccessResponse:" + response.toString());
+            public void onResponse(String response) {
+                Log.d("Success",response.toString());
                 try {
-                    JSONArray vec = response.getJSONArray("results");
-                    for (int i=0; i<vec.length(); i++){
-                        try {
-                            JSONObject vehicleObject = (JSONObject) vec.get(i);
-                            Vehicle vech = new Vehicle();
-                            vech.setName(vehicleObject.getString("name").toString());
-                            vech.setImage("http://192.168.1.70/api/images/" + vehicleObject.getString("image"));
-                            vehicles.add(vech);
-
-                         }catch (JSONException e) {
-                            e.printStackTrace();
+                    JSONObject jsonObject = new JSONObject(response);
+                    Log.d("Success object",jsonObject.toString());
+                    JSONArray jsonArray = jsonObject.getJSONArray("results");
+                    if(jsonArray.length()>0){
+                        for(int i=0; i<jsonArray.length(); i++){
+                            JSONObject jsonObject1  = jsonArray.getJSONObject(i);
+                            Log.d("value of i", "i is" + i);
+                            Vehicle vec = new Vehicle();
+                            vec.setName(jsonObject1.getString("name").toString());
+                            vec.setImage("http://192.168.1.70/api/images/" + jsonObject1.getString("image"));
+                            vehicles.add(vec);
                         }
+                        adapter.notifyDataSetChanged();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
-                LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
-                llm.setOrientation(LinearLayoutManager.VERTICAL);
-                recyclerView.setLayoutManager(llm);
-                adapter = new Adapter(getApplicationContext(),vehicles);
-                recyclerView.setAdapter(adapter);
-
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("TAG", "onErrorResponse:" + error.getMessage());
+                Log.d("error",error.toString());
             }
         });
-        queue.add(jsonObjectRequest);
+        queue.add(request);
     }
-}
+    }
+
 
