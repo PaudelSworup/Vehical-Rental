@@ -121,7 +121,8 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:letterSpacing="0.2"
-        android:textSize="20sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         android:text="@string/log" />
 
 

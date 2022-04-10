@@ -13,16 +13,22 @@
         android:theme="@style/Theme.VehicleRental"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UserDashboard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false" />
+        <activity
             android:name=".Detail"
             android:exported="false" />
         <activity
             android:name=".UserPage"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".indexUser"
             android:exported="false" />
         <activity
             android:name=".Index"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".Login_Activity"
@@ -40,6 +46,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

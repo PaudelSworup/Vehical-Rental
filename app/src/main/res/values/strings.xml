@@ -1,4 +1,5 @@
 <resources>
+    <!--    basic  car rental details-->
     <string name="app_name">Vehicle Rental</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
@@ -13,6 +14,12 @@
     <string name="log">Already Registered? Login</string>
     <string name="post">Submit</string>
     <string name="car">Car detail</string>
+    <string name="header">lets grow together</string>
+    <string name="todo">todo</string>
+    <string name="android">Android</string>
+    <string name="rating">Vehicle Rating</string>
+    <string name="rate">Ratings</string>
+    <string name="vtype">Type</string>
 
     <!--    registration-->
     <string name="name">Name</string>
@@ -20,5 +27,19 @@
     <string name="phone">Phone</string>
     <string name="password">Password</string>
     <string name="vehicleName">Vehicle Name</string>
+
+
+    <!--    menu items names-->
+    <string name="home">Home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logout_menu">Logout</string>
+    <string name="list">List</string>
+    <string name="auth">Authentication</string>
+    <string name="users">Manage Users</string>
+
+    <!--    navigation-->
+    <string name="navigation_open">open Navigation Drawer</string>
+    <string name="navigation_close">close Navigation Drawer</string>
+
 
 </resources>

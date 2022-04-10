@@ -1,101 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:id="@+id/drawerlayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     tools:context=".Index">
 
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/firebaseImg"
-        android:layout_width="116dp"
-        android:layout_height="106dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="30dp"
-        android:layout_marginBottom="148dp"
-        android:background="@drawable/car"
-        android:scaleType="centerCrop"
-        app:civ_border_color="@color/black"
-        app:civ_border_width="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/vehicleName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:strokeColor="#00BCd4"
-        app:strokeWidth="5dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="74dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|right"
-        android:clickable="true"
-        android:hint="@string/name"
-        app:srcCompat="@drawable/ic_baseline_camera_alt_24"
-        tools:ignore="SpeakableTextPresentCheck"
-        app:layout_constraintBottom_toBottomOf="@id/firebaseImg"
-        app:layout_constraintEnd_toEndOf="@id/firebaseImg"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="94dp" />
-
-
-    <EditText
-        android:id="@+id/vehicleName"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="184dp"
-        android:ems="10"
-        android:hint="@string/vehicleName"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="144dp"
-        android:background="@drawable/custom_button"
-        android:letterSpacing="0.2"
-        android:text="@string/post"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleName"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/detail"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/car"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleName"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/logout"
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
-        app:layout_constraintStart_toEndOf="@+id/firebaseImg"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/navigationview"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/adminmenu"
+        android:layout_gravity="start"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/toolbar_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/app_name"
+            app:titleMarginStart="10dp"
+            app:titleTextColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firebaseImg"
+            android:layout_width="108dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="30dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/logo"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/vehicleName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="1.0"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:strokeColor="#000"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:clickable="true"
+            android:hint="@string/name"
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintBottom_toBottomOf="@id/firebaseImg"
+            app:layout_constraintEnd_toEndOf="@id/firebaseImg"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="94dp" />
+
+
+        <EditText
+            android:id="@+id/vehicleName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="196dp"
+            android:ems="10"
+            android:hint="@string/vehicleName"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/vehicleRating"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/rating"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleName" />
+
+        <EditText
+            android:id="@+id/vehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/vtype"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleRating" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:letterSpacing="0.2"
+            android:text="@string/post"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/detail"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/car"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleRating" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

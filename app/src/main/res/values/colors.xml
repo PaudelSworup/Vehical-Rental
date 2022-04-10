@@ -12,5 +12,7 @@
     <color name="actionbar">#342B2C</color>
     <color name="colorAccent">#000</color>
     <color name="btn_color">#38fcbb</color>
+    <color name="toolbar_color">#DD3232</color>
+    <color name="grid">#c8b78b</color>
 
 </resources>

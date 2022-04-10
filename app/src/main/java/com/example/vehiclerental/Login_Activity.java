@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -95,10 +96,12 @@ public class Login_Activity extends AppCompatActivity {
 
 
         fAuth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener((task) ->{
-            pd = new ProgressDialog(this);
-            pd.setTitle("Logging in...");
-            pd.show();
             if(task.isSuccessful()){
+                pd = new ProgressDialog(this);
+                pd.setTitle("Logging in...");
+                pd.show();
+                email.setText("");
+                password.setText("");
                 if(userEmail.equals("subhadra@mail.com")){
                     Intent intent = new Intent(getApplicationContext(), Index.class);
                     startActivity(intent);
@@ -107,7 +110,17 @@ public class Login_Activity extends AppCompatActivity {
                     startActivity(in);
                 }
                 Toast.makeText(Login_Activity.this, "Login Successful",Toast.LENGTH_SHORT).show();
-            }else  Toast.makeText(Login_Activity.this, "Email or password is incorrect",Toast.LENGTH_SHORT).show();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        pd.dismiss();
+                    }
+                }, 3000);
+
+            }else{
+                Toast.makeText(Login_Activity.this, "Email or password is incorrect",Toast.LENGTH_SHORT).show();
+            }
+
 
         });
 
