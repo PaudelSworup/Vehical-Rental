@@ -35,7 +35,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Detail extends AppCompatActivity {
-//    public String API_KEY = "AIzaSyAPXc11lNUFk4csXTtMNBt1EcubaEs_GGE";
     ArrayAdapter<String> arrayAdapter;
     String [] items = {"Pokhara", "Mustang" ,"Rara" ,"Nagarkot", "Namche Bazar" ,
             "Bardiya National Park", "Sarangkot" ," Bandipur",
