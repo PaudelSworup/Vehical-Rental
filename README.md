@@ -5,12 +5,14 @@ Hello viewers this project is still on development so i will be completing this 
 <hr>
 <div>
   <div style="display:flex; justify-content:center; align-items:center>
-     <img src="https://user-images.githubusercontent.com/96978659/162631791-95f37c08-4c6b-4be8-8108-d6b357f35afb.png" width="200" height="200" style="padding:10px"/>
-     <img src="https://user-images.githubusercontent.com/96978659/162631532-b4a38b9d-b45d-46bb-b3f6-3b42da4823c6.png" width="200" height="200" style="padding:10px"/>
-      <img src="https://user-images.githubusercontent.com/96978659/162631583-17b15135-1231-4fb5-ae0b-8a3781baec7c.png" width="200" height="200" style="padding:10px"/>
-        <img src="https://user-images.githubusercontent.com/96978659/162631689-c4ec3abe-4868-4c73-ac0b-a3a66598fad6.png" width="200" height="200" style="padding:10px"/>
-        <img src="https://user-images.githubusercontent.com/96978659/162631706-dbb41e57-420e-49b3-9b5d-027026114726.png" width="200" height="200" style="padding:10px"/>        <img src="https://user-images.githubusercontent.com/96978659/162631791-95f37c08-4c6b-4be8-8108-d6b357f35afb.png" width="200" height="200" style="padding:10px"/> 
+     <img src="https://user-images.githubusercontent.com/96978659/165984512-261c66dd-37cb-4d18-b32d-bfaa7eb2d7da.png" width="100" height="100" style="padding:10px"/>
+     <img src="https://user-images.githubusercontent.com/96978659/165984618-ffea7f93-b10a-4272-86c4-32132e9ce67d.png" width="200" height="200" style="padding:10px"/>
+      <img src="https://user-images.githubusercontent.com/96978659/165984708-d93c5e8e-8af6-465a-a6f1-eb130d50eef2.jpg" width="200" height="200" style="padding:10px"/>
+        <img src="https://user-images.githubusercontent.com/96978659/165984781-7dae140a-4c30-4cdb-9fd9-38c9f162cb90.png" width="200" height="200" style="padding:10px"/>
+        <img src="https://user-images.githubusercontent.com/96978659/165984906-778ff337-bac9-41d3-8ca7-ba43f8aefba8.png" width="200" height="200" style="padding:10px"/> 
   </div>
  </div>
-<!--   ![page](https://user-images.githubusercontent.com/96978659/162631791-95f37c08-4c6b-4be8-8108-d6b357f35afb.png) -->
+
+
+
 
