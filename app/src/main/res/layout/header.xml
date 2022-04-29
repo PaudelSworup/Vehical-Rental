@@ -10,7 +10,7 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/firebaseImg"
+        android:id="@+id/firebaseImgHeader"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center"

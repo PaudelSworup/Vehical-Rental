@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VehicleRental"
         android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+
         <activity
             android:name=".UserDashboard"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"

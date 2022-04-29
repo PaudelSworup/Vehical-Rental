@@ -43,6 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Vehicle mov = movie.get(position);
         holder.vehicleName.setText(movie.get(position).getName());
         holder.vehicleRating.setText(movie.get(position).getRating());
+        holder.contactNumber.setText(movie.get(position).getPhone());
         holder.vehicleType.setText(movie.get(position).getType());
         holder.ratingBar.setRating(Float.parseFloat(movie.get(position).getRating()));
         Picasso.get().load(movie.get(position).getImage()).into(holder.vehicleImage);
@@ -55,6 +56,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 vehicleList.add(mov.getDescription());
                 vehicleList.add(mov.getRating());
                 vehicleList.add(mov.getType());
+                vehicleList.add(mov.getPhone());
                 Log.d("hDesc", "onClick: " + mov.getRating());
                 Intent in  = new Intent(context, Detail.class);
                 in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -72,7 +74,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 
     public class ViewHolder extends  RecyclerView.ViewHolder{
-        TextView vehicleName, vehicleRating, vehicleType;
+        TextView vehicleName, vehicleRating, vehicleType, contactNumber;
         RatingBar ratingBar;
         ImageView vehicleImage;
         RelativeLayout relativeLayout;
@@ -80,6 +82,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             super(itemView);
             vehicleName = itemView.findViewById(R.id.txtTitle);
             vehicleRating = itemView.findViewById(R.id.txtRating);
+            contactNumber = itemView.findViewById(R.id.txtPhone);
             vehicleType = itemView.findViewById(R.id.txtType);
             ratingBar = itemView.findViewById(R.id.rating_star);
             vehicleImage = itemView.findViewById(R.id.image);

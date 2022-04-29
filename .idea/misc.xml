@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/card_design.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/custom_button.xml" value="0.1675" />
+        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/ic_baseline_notifications_active_24.xml" value="0.1675" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/ic_menu_svgrepo_com.xml" value="0.1675" />
+        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/input.xml" value="0.1675" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/selected_image_shadow.xml" value="0.105" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/drawable/shadow_effect.xml" value="0.11" />
+        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout-v28/activity_detail.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_dashboard.xml" value="0.23229166666666667" />
-        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_detail.xml" value="0.8" />
+        <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_index.xml" value="1.0" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_indexuser.xml" value="0.6666666666666666" />
         <entry key="..\:/AndroidStudioProjects/VehicleRental/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />

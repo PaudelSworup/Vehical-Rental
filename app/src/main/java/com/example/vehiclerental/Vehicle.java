@@ -5,6 +5,7 @@ package com.example.vehiclerental;
     private String rating;
     private String type;
     private String image;
+    private String phone;
     private String description;
 
 
@@ -45,6 +46,14 @@ package com.example.vehiclerental;
 
      public String getType() {
          return type;
+     }
+
+     public String getPhone() {
+         return phone;
+     }
+
+     public void setPhone(String phone) {
+         this.phone = phone;
      }
 
      public void setType(String type) {

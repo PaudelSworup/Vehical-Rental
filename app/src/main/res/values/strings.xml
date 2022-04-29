@@ -19,7 +19,10 @@
     <string name="android">Android</string>
     <string name="rating">Vehicle Rating</string>
     <string name="rate">Ratings</string>
-    <string name="vtype">Type</string>
+    <string name="vehicle_type">Type</string>
+    <string name="contact">Enter contact number</string>
+    <string name="addToList">Add to list</string>
+    <string name="dest">Enter the destination</string>
 
     <!--    registration-->
     <string name="name">Name</string>
@@ -40,6 +43,10 @@
     <!--    navigation-->
     <string name="navigation_open">open Navigation Drawer</string>
     <string name="navigation_close">close Navigation Drawer</string>
+
+
+<!--    google map api key-->
+    <string name="google_maps_key">AIzaSyAPXc11lNUFk4csXTtMNBt1EcubaEs_GGE</string>
 
 
 </resources>

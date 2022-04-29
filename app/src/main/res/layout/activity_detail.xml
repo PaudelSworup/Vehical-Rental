@@ -7,13 +7,15 @@
     android:gravity="center_horizontal"
     android:background="@color/black"
     android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".Detail">
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_width="230dp"
+        android:layout_height="165dp"
         android:layout_margin="20dp"
+        android:padding="30dp"
         app:cardElevation="50dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="50dp">
@@ -26,9 +28,9 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:src="@drawable/bg"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -38,9 +40,10 @@
                 android:text="cars"
                 android:textAlignment="center"
                 android:layout_marginTop="5dp"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textColor="#1E1E1E"
                 android:fontFamily="sans-serif-black"/>
+
 
             <RatingBar
                 android:id="@+id/rating_star"
@@ -59,31 +62,83 @@
 
     </androidx.cardview.widget.CardView>
 
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/destination"
+        android:hint="@string/dest"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input"
+        android:textColor="@color/black"
+        android:completionThreshold="1"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:id="@+id/detailTitle"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/txtDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hello"
-        android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:textSize="18sp"
-        android:layout_margin="10dp"
-        android:justificationMode="inter_word"
+        android:textSize="13sp"
         android:textColor="@color/white"
-        android:fontFamily="sans-serif"/>
+        android:fontFamily="sans-serif-light"/>
 
     <TextView
         android:id="@+id/txtType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hello"
-        android:textAlignment="center"
         android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:justificationMode="inter_word"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/txtPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif"
          />
+
+
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/destination"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:hint="@string/dest"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        android:fontFamily="sans-serif"-->
+<!--        />-->
+
+
+    <Button
+        android:id="@+id/addToList"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:letterSpacing="0.2"
+        android:text="@string/addToList"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPhoneNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </LinearLayout>

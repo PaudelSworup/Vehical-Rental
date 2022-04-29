@@ -107,12 +107,25 @@
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="@string/vtype"
+            android:hint="@string/vehicle_type"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vehicleRating" />
+            app:layout_constraintTop_toBottomOf="@+id/detail" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/contact"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehicleType" />
 
         <Button
             android:id="@+id/submit"
@@ -124,7 +137,7 @@
             android:text="@string/post"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/detail"
+            app:layout_constraintTop_toBottomOf="@+id/contact"
             tools:layout_editor_absoluteX="0dp" />
 
         <EditText

@@ -48,8 +48,8 @@ public class UserPage extends AppCompatActivity implements NavigationView.OnNavi
 
     RecyclerView recyclerView;
     List<Vehicle> vehicles;
-    private String JSON_URL = "http://192.168.1.67/api/get.php";
-    private String imageUrl = "http://192.168.1.67/api/images/";
+    private String JSON_URL = "http://192.168.1.69/api/get.php";
+    private String imageUrl = "http://192.168.1.69/api/images/";
 
     Adapter adapter;
     LinearLayoutManager llm ;
@@ -143,6 +143,7 @@ public class UserPage extends AppCompatActivity implements NavigationView.OnNavi
                             vec.setName(jsonObject1.getString("name").toString());
                             vec.setImage(imageUrl + jsonObject1.getString("image"));
                             vec.setRating(jsonObject1.getString("rating").toString());
+                            vec.setPhone(jsonObject1.getString("phone").toString());
                             vec.setType(jsonObject1.getString("type").toString());
                             vec.setDescription(jsonObject1.getString("car_detail"));
                             vehicles.add(vec);
