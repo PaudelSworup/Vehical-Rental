@@ -13,7 +13,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="182dp"
         app:cardElevation="50dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp">
@@ -26,7 +26,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="125dp"
                 android:src="@drawable/bg"
                 android:scaleType="fitXY"
                 tools:ignore="ContentDescription" />
@@ -72,6 +72,17 @@
         android:textColor="@color/black"
         android:completionThreshold="1"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/days"
+        android:hint="@string/days"
+        android:textColorHint="@color/black"
+        android:background="@drawable/input"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        />
+
     <TextView
         android:textColor="@color/white"
         android:fontFamily="sans-serif-condensed-medium"
@@ -107,6 +118,14 @@
         android:textColor="@color/white"
         android:fontFamily="sans-serif"
          />
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif" />
 
 
 
@@ -128,9 +147,9 @@
     <Button
         android:id="@+id/addToList"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_button"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/indexbutton"
         android:letterSpacing="0.2"
         android:text="@string/addToList"
         android:textColor="@color/white"

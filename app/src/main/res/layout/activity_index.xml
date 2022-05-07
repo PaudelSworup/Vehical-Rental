@@ -41,18 +41,18 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/firebaseImg"
-            android:layout_width="108dp"
-            android:layout_height="96dp"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="30dp"
-            android:layout_marginBottom="100dp"
             android:background="@drawable/logo"
             android:scaleType="centerCrop"
             app:civ_border_color="@color/black"
             app:civ_border_width="3dp"
             app:layout_constraintBottom_toTopOf="@+id/vehicleName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.543"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
             app:layout_constraintVertical_bias="1.0"
@@ -60,26 +60,24 @@
             app:strokeColor="#000"
             app:strokeWidth="1dp" />
 
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
-            android:layout_width="74dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
             android:clickable="true"
             android:hint="@string/name"
-            app:srcCompat="@drawable/ic_baseline_camera_alt_24"
-            tools:ignore="SpeakableTextPresentCheck"
             app:layout_constraintBottom_toBottomOf="@id/firebaseImg"
             app:layout_constraintEnd_toEndOf="@id/firebaseImg"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="94dp" />
-
+            app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/vehicleName"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="196dp"
+            android:layout_marginTop="176dp"
             android:ems="10"
             android:hint="@string/vehicleName"
             android:inputType="textPersonName"
@@ -127,16 +125,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vehicleType" />
 
+
+        <EditText
+            android:id="@+id/indexCategory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/cat"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact"
+            app:layout_constraintVertical_bias="0.0" />
+
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/custom_button"
+            android:layout_height="50dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/indexbutton"
             android:letterSpacing="0.2"
             android:text="@string/post"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/contact"
             tools:layout_editor_absoluteX="0dp" />
 

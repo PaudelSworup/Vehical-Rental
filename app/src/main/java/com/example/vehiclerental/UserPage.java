@@ -145,7 +145,8 @@ public class UserPage extends AppCompatActivity implements NavigationView.OnNavi
                             vec.setRating(jsonObject1.getString("rating").toString());
                             vec.setPhone(jsonObject1.getString("phone").toString());
                             vec.setType(jsonObject1.getString("type").toString());
-                            vec.setDescription(jsonObject1.getString("car_detail"));
+                            vec.setDescription(jsonObject1.getString("car_detail").toString());
+                            vec.setCategory(jsonObject1.getString("category").toString());
                             vehicles.add(vec);
                         }
                         adapter.notifyDataSetChanged();

@@ -76,7 +76,7 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
     DocumentReference documentReference;
     FloatingActionButton camera;
     private FirebaseAuth firebaseAuth;
-    EditText vehicleName , carDetail, vehicleRating, vehicleType, contactNumber;
+    EditText vehicleName , carDetail, vehicleRating, vehicleType, contactNumber, category;
     ActivityResultLauncher<String> imgContent;
     Uri imgUri;
     Button Submit,logout;
@@ -96,6 +96,7 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
         vehicleName = findViewById(R.id.vehicleName);
         vehicleRating = findViewById(R.id.vehicleRating);
         vehicleType = findViewById(R.id.vehicleType);
+        category = findViewById(R.id.indexCategory);
         contactNumber = findViewById(R.id.contact);
         carDetail = findViewById(R.id.detail);
         Submit = findViewById(R.id.submit);
@@ -219,6 +220,7 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
         String vehicle_rating = vehicleRating.getText().toString();
         String vehicle_type = vehicleType.getText().toString();
         String contact_vehicle = contactNumber.getText().toString();
+        String vehicle_category = category.getText().toString();
         String contact_regex = "^[0-9]+$";
 
 
@@ -272,6 +274,11 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
             return;
         }
 
+        if(vehicle_category.isEmpty()){
+            category.setError("please enter the category of vehicle");
+            return;
+        }
+
 
 
 
@@ -305,6 +312,7 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
                 params.put("phone", contact_vehicle);
                 params.put("type",vehicle_type);
                 params.put("detail",vehicle_detail);
+                params.put("category",vehicle_category);
                 return params;
 
             }

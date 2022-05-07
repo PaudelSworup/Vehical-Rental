@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -41,11 +42,13 @@ public class Detail extends AppCompatActivity {
             "Koshi tapu", "Chandragiri", "Janaki Temple","Bhote Koshi", "Illam", "Khumbu Valley", "Nuwakot"};
     ImageView img;
     AutoCompleteTextView autoCompleteTextView;
-    TextView txtName , txtDescription, txtType, txtPhoneNum, titleDetail;
+    EditText vehicleRentalDays;
+    TextView txtName , txtDescription, txtType, txtPhoneNum, titleDetail, txtCategory;
     RatingBar txtRating;
-    String title, description, imageUrl, rating, type, phone;
+    String title, description, imageUrl, rating, type, phone, vehicleCategory,destination_box, rentalTime;
     Button addToList;
     PlacesClient placesClient;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -56,9 +59,11 @@ public class Detail extends AppCompatActivity {
         txtName = findViewById(R.id.txtName);
         addToList = findViewById(R.id.addToList);
         autoCompleteTextView = findViewById(R.id.destination);
+        vehicleRentalDays = findViewById(R.id.days);
         titleDetail = findViewById(R.id.detailTitle);
         txtRating = findViewById(R.id.rating_star);
         txtPhoneNum = findViewById(R.id.txtPhoneNum);
+        txtCategory =findViewById(R.id.category);
         txtType = findViewById(R.id.txtType);
         txtDescription = findViewById(R.id.txtDesc);
 
@@ -69,6 +74,7 @@ public class Detail extends AppCompatActivity {
         rating = vehicles.get(3);
         type = vehicles.get(4);
         phone = vehicles.get(5);
+        vehicleCategory = vehicles.get(6);
         Picasso.get().load(imageUrl).into(img);
         txtName.setText(title);
         txtRating.setRating(Float.parseFloat(rating));
@@ -76,11 +82,23 @@ public class Detail extends AppCompatActivity {
         txtDescription.setText(description);
         txtType.setText("Vehicle Type : " + type);
         txtPhoneNum.setText("Contact Number : " + phone);
+        txtCategory.setText("Category : " + vehicleCategory);
 
 
         addToList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               destination_box  = autoCompleteTextView.getText().toString();
+               rentalTime = vehicleRentalDays.getText().toString();
+                if(destination_box.isEmpty()){
+                    autoCompleteTextView.setError("Please enter your destination");
+                    return;
+                }
+
+                if(rentalTime.isEmpty()){
+                    vehicleRentalDays.setError("Please enter for how many days you want to rent a vehicle");
+                    return;
+                }
                 Toast.makeText(getApplicationContext(),"Wait for admin Approval", Toast.LENGTH_SHORT).show();
             }
         });

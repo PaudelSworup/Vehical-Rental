@@ -7,6 +7,7 @@ package com.example.vehiclerental;
     private String image;
     private String phone;
     private String description;
+    private String category;
 
 
 
@@ -18,6 +19,14 @@ package com.example.vehiclerental;
 
      public String getRating() {
          return rating;
+     }
+
+     public String getCategory() {
+         return category;
+     }
+
+     public void setCategory(String category) {
+         this.category = category;
      }
 
      public void setRating(String rating) {

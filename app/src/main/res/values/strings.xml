@@ -23,6 +23,8 @@
     <string name="contact">Enter contact number</string>
     <string name="addToList">Add to list</string>
     <string name="dest">Enter the destination</string>
+    <string name="cat">Enter a category</string>
+    <string name="days">Enter days </string>
 
     <!--    registration-->
     <string name="name">Name</string>
